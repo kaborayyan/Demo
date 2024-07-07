@@ -1,4 +1,6 @@
-﻿using static System.Formats.Asn1.AsnWriter;
+﻿//Right click on the dependecies => add Project Reference
+using TestClassLibrary; // Now you can use TypeA
+using static System.Formats.Asn1.AsnWriter;
 using System.ComponentModel;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Claims;
@@ -33,7 +35,12 @@ namespace AccessModifiers
     {
         static void Main(string[] args)
         {
+            TypeA NewObj = new TypeA(); // can now be used outside its project
+            // TypeB NewObj = new TypeB(); We can not do the same because TypeB is internal
             Console.WriteLine("Hello, World!");
+            // NewObj.X = 10; not allowed X is private
+            // NewObj.Y = 20; not allowed Y is internal
+            NewObj.Z = 20; // allowed Z is public
         }
     }
 }
