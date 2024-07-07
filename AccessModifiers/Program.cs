@@ -4,17 +4,25 @@ using System.Runtime.Intrinsics.X86;
 using System.Security.Claims;
 
 // Access Modifiers indicate Accessibilty Scope
-// Largest scope is the name space inside you can write(Class struct interface enums)
 // From the narrowest to the widest
+//   1. Private 
+//   2. Private Protected
+//   3. Protected
+//   4. Internal
+//   5. Internal Protected
+//   6. Public
 
-// Private 
-// Private Protected
-// Protected
-// Internal
-// Internal Protected
-// Public
+// Largest scope is the NameSpace
+// Inside a namespace you can write
+//   1. Class
+//   2. Struct
+//   3. Interface
+//   4. Enums
 
-// Access modifiers inside Namespace are internal (default) and public only
+// Access modifiers inside Namespace are only:
+// 1. Internal (default)
+// 2. Public
+
 // Internal means accessible in its own project only
 // Public will be accessible to other projects after using a reference:
 // use ClassLibraryName

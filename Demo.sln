@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiers", "AccessModifiers\AccessModifiers.csproj", "{8C2169AB-3D67-4551-86C8-3D144DD0495D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClassLibrary", "TestClassLibrary\TestClassLibrary.csproj", "{1F79C202-8F42-41A3-AA81-6DF19371AEAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8C2169AB-3D67-4551-86C8-3D144DD0495D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C2169AB-3D67-4551-86C8-3D144DD0495D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C2169AB-3D67-4551-86C8-3D144DD0495D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F79C202-8F42-41A3-AA81-6DF19371AEAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F79C202-8F42-41A3-AA81-6DF19371AEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F79C202-8F42-41A3-AA81-6DF19371AEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F79C202-8F42-41A3-AA81-6DF19371AEAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
