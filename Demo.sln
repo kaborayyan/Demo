@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{8A60A12F-3D67-4E58-9100-9BDF565BE44B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiers", "AccessModifiers\AccessModifiers.csproj", "{8C2169AB-3D67-4551-86C8-3D144DD0495D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8A60A12F-3D67-4E58-9100-9BDF565BE44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A60A12F-3D67-4E58-9100-9BDF565BE44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A60A12F-3D67-4E58-9100-9BDF565BE44B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C2169AB-3D67-4551-86C8-3D144DD0495D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2169AB-3D67-4551-86C8-3D144DD0495D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2169AB-3D67-4551-86C8-3D144DD0495D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2169AB-3D67-4551-86C8-3D144DD0495D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
