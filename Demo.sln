@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifiers", "AccessMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestClassLibrary", "TestClassLibrary\TestClassLibrary.csproj", "{1F79C202-8F42-41A3-AA81-6DF19371AEAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutEnums", "AboutEnums\AboutEnums.csproj", "{FC7719DF-EF9C-4F09-8DDB-86994C0CBB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AboutEnums", "AboutEnums\AboutEnums.csproj", "{FC7719DF-EF9C-4F09-8DDB-86994C0CBB5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs", "Structs\Structs.csproj", "{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FC7719DF-EF9C-4F09-8DDB-86994C0CBB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC7719DF-EF9C-4F09-8DDB-86994C0CBB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC7719DF-EF9C-4F09-8DDB-86994C0CBB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
