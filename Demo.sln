@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestClassLibrary", "TestCla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AboutEnums", "AboutEnums\AboutEnums.csproj", "{FC7719DF-EF9C-4F09-8DDB-86994C0CBB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs", "Structs\Structs.csproj", "{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structs", "Structs\Structs.csproj", "{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxing_Unboxing", "Boxing_Unboxing\Boxing_Unboxing.csproj", "{9CC3C8DE-3E74-4BB7-93F6-7AFD33287B1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F31B72C-EB9C-4C7F-B917-CF980E640D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC3C8DE-3E74-4BB7-93F6-7AFD33287B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC3C8DE-3E74-4BB7-93F6-7AFD33287B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC3C8DE-3E74-4BB7-93F6-7AFD33287B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC3C8DE-3E74-4BB7-93F6-7AFD33287B1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
