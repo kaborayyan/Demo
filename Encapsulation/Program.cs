@@ -34,6 +34,11 @@
             Employee01.Salary = 3500;
             Console.WriteLine(Employee01.Salary);
             // Access through property
+
+            Phonebook Note = new Phonebook(3);
+            Note.AddPerson(0, "Karim", 123);
+            Note.AddPerson(1, "Amr", 456);
+            Note.AddPerson(0, "Mona", 789);
         }
     }
 }
