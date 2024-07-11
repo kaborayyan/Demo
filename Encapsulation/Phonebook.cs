@@ -73,7 +73,7 @@ namespace Encapsulation
                     }
                 }
             }
-        } 
+        }
         #endregion
 
         #region Indexer
@@ -112,13 +112,13 @@ namespace Encapsulation
             }
         }
 
-            public string this[int index]
+        public string this[int index]
         {
             get
             {
                 return $"{index} :: {Names[index]} :: {Numbers[index]}";
             }
         }
-            #endregion
+        #endregion
     }
 }
