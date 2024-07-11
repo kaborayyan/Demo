@@ -35,10 +35,22 @@
             Console.WriteLine(Employee01.Salary);
             // Access through property
 
+
+            // Constructor test
             Phonebook Note = new Phonebook(3);
             Note.AddPerson(0, "Karim", 123);
             Note.AddPerson(1, "Amr", 456);
-            Note.AddPerson(0, "Mona", 789);
+            Note.AddPerson(2, "Mona", 789);
+
+            // Getter Setter test
+            int KarimNumber = Note.GetPersonNumber("Karim");
+            Console.WriteLine(KarimNumber == -1? "Person Not Found" : KarimNumber);
+            Note.ChangePersonNumber("Karim", 666);
+            Console.WriteLine(Note.GetPersonNumber("Karim") == -1? "Person Not Found" : Note.GetPersonNumber("Karim"));
+
+            // Indexer test
+            Note["Karim"] = 010123;
+            Console.WriteLine(Note["Karim"]);
         }
     }
 }
