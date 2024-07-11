@@ -14,6 +14,10 @@ namespace TestClassLibrary
             // TypeA is public, you can access it anywhere inside its project
             // TestObject.X = 10; Not valid because X is private
             TestObject.Y = 20; // allowed inside the same project "TestClassLibrary"
+
+            // TestObject.A = 10; // Invalid => Private
+            // TestObject.B = 10; // Invalid => Private
+            TestObject.C = 10; // Valid => internal
         }
     }
 }

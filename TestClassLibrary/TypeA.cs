@@ -47,6 +47,8 @@ namespace TestClassLibrary
         internal int Y; // access within the project
         public int Z; // access even to other projects after using the namespace
 
-
+        protected private int B; // Like Private without inheritance
+        protected int A; // Like Private without inheritance
+        protected internal int C; // Like Internal without inheritance
     }
 }
