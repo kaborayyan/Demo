@@ -109,8 +109,16 @@ namespace Encapsulation
                         }
                     }
                 }
-            } 
-            #endregion
+            }
         }
+
+            public string this[int index]
+        {
+            get
+            {
+                return $"{index} :: {Names[index]} :: {Numbers[index]}";
+            }
+        }
+            #endregion
     }
 }

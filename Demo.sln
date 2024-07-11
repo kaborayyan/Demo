@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structs", "Structs\Structs.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boxing_Unboxing", "Boxing_Unboxing\Boxing_Unboxing.csproj", "{9CC3C8DE-3E74-4BB7-93F6-7AFD33287B1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapsulation", "Encapsulation\Encapsulation.csproj", "{6082749C-DED6-467C-9A4B-4636BCC2D83A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encapsulation", "Encapsulation\Encapsulation.csproj", "{6082749C-DED6-467C-9A4B-4636BCC2D83A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{75A0026E-E046-4F69-85EC-CCC1A2E6976F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{6082749C-DED6-467C-9A4B-4636BCC2D83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6082749C-DED6-467C-9A4B-4636BCC2D83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6082749C-DED6-467C-9A4B-4636BCC2D83A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A0026E-E046-4F69-85EC-CCC1A2E6976F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A0026E-E046-4F69-85EC-CCC1A2E6976F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A0026E-E046-4F69-85EC-CCC1A2E6976F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A0026E-E046-4F69-85EC-CCC1A2E6976F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

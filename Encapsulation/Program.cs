@@ -51,6 +51,8 @@
             // Indexer test
             Note["Karim"] = 010123;
             Console.WriteLine(Note["Karim"]);
+
+            Console.WriteLine(Note[0]);
         }
     }
 }
