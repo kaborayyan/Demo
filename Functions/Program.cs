@@ -22,11 +22,33 @@
             SecondNumber = Temp;
         }
 
-        static void SwapValueByRef(ref int FirstNumber, ref int SecondNumber)
+        public static void SwapValueByRef(ref int FirstNumber, ref int SecondNumber)
         {
             int Temp = FirstNumber;
             FirstNumber = SecondNumber;
             SecondNumber = Temp;
+        }
+
+        public static int SumArrayByValue(int[] Numbers)
+        {
+            int Sum = 0;
+            Numbers = new int[] {40, 50,60 };
+            for (int i = 0; i < Numbers.Length; i++)
+            {
+                Sum += Numbers[i];
+            }
+            return Sum;
+        }
+
+        public static int SumArrayByRef(ref int[] Numbers)
+        {
+            int Sum = 0;
+            Numbers = new int[] { 40, 50, 60 };
+            for (int i = 0; i < Numbers.Length; i++)
+            {
+                Sum += Numbers[i];
+            }
+            return Sum;
         }
         static void Main(string[] args)
         {
@@ -68,12 +90,23 @@
             // Passing Value Type Parameters By Reference
             // It will affect the original Variables
             // Since we are passing the variables themselves
+            // The Parameters are both input and output
             SwapValueByRef(ref X, ref Y);            
             Console.WriteLine(X); //20
             Console.WriteLine(Y); //10
             #endregion
 
+            #region Passing Refrence Type Parameters
+            // On passing them by value, we've created two addresses to the same information in the heap
+            int[] Ages = { 10, 20, 30 };
+            Console.WriteLine(SumArrayByValue(Ages)); //150
+            Console.WriteLine(Ages[0]); //10
 
+            // On passing them by reference, we're changing the object itself.
+            int[] Salaries = { 1000, 1500, 1500 };
+            Console.WriteLine(SumArrayByRef(ref Salaries)); //150
+            Console.WriteLine(Salaries[0]); //40
+            #endregion
 
         }
     }
