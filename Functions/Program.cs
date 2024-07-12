@@ -50,6 +50,12 @@
             }
             return Sum;
         }
+
+        public static void SumAndSub(int X, int Y, out int Sum, out int Sub)
+        {
+            Sum = X + Y;
+            Sub = X - Y;
+        }
         static void Main(string[] args)
         {
             #region Functions
@@ -106,6 +112,14 @@
             int[] Salaries = { 1000, 1500, 1500 };
             Console.WriteLine(SumArrayByRef(ref Salaries)); //150
             Console.WriteLine(Salaries[0]); //40
+            #endregion
+
+            #region Passing By Out
+            int A = 100, B = 70;
+            int SumResult, SubResult;
+            SumAndSub(A, B, out SumResult, out SubResult);
+            Console.WriteLine(SumResult);
+            Console.WriteLine(SubResult);
             #endregion
 
         }
