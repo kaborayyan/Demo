@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boxing_Unboxing", "Boxing_U
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encapsulation", "Encapsulation\Encapsulation.csproj", "{6082749C-DED6-467C-9A4B-4636BCC2D83A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{75A0026E-E046-4F69-85EC-CCC1A2E6976F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes", "Classes\Classes.csproj", "{75A0026E-E046-4F69-85EC-CCC1A2E6976F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{13DC4A83-A223-445E-A1DB-8176834040C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{13DC4A83-A223-445E-A1DB-8176834040C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "NullableTypes\NullableTypes.csproj", "{CCE40216-0644-4688-8C90-710945719058}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{13DC4A83-A223-445E-A1DB-8176834040C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13DC4A83-A223-445E-A1DB-8176834040C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13DC4A83-A223-445E-A1DB-8176834040C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCE40216-0644-4688-8C90-710945719058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCE40216-0644-4688-8C90-710945719058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCE40216-0644-4688-8C90-710945719058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCE40216-0644-4688-8C90-710945719058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
