@@ -19,18 +19,20 @@ namespace Overriding
 
         public new void MyFun01() // new => new version of MyFun01()
         {
-            // Because Function01 is static binding is done using the keyword "new"
-            // This happens in compilation time
+            // Because Function01 is "Static Binding" is done using the keyword "new"
+            // This happens in compilation time "Early Binding"
             // The Compiler will bind the function based on reference not the object
             Console.WriteLine("I'm derived (Child)");
         }
 
         public override void MyFun02()
         {
-            // Function02 is dynamic binding using the keyword override
+            // Function02 is "Dynamic Binding" using the keyword override
             // The function must be "public virtual" to do this
             // It happens in run time
             // When CLR finds the word virtual, it will search for the last override
+            // The CLR will bind the function based on the object not the reference
+            // Check the binding part to understand more
 
             Console.WriteLine($"TypeB A: {A}, B: {B}");
         }
