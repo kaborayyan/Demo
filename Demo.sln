@@ -41,11 +41,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICompareable_Interface", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstraction", "Abstraction\Abstraction.csproj", "{35D12B96-49C1-430C-8F56-5B5ACD0CC2C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static", "Static\Static.csproj", "{16546F9D-D5C9-4FED-898C-7D1081C969C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Static", "Static\Static.csproj", "{16546F9D-D5C9-4FED-898C-7D1081C969C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sealed", "Sealed\Sealed.csproj", "{1A7007E7-EB07-4CD3-8DEB-884B1F0F16A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sealed", "Sealed\Sealed.csproj", "{1A7007E7-EB07-4CD3-8DEB-884B1F0F16A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partial", "Partial\Partial.csproj", "{8C204436-A140-4188-9703-A84CD9706A7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Partial", "Partial\Partial.csproj", "{8C204436-A140-4188-9703-A84CD9706A7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{826404E3-41EF-498A-A227-8439FB74490F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{8C204436-A140-4188-9703-A84CD9706A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C204436-A140-4188-9703-A84CD9706A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C204436-A140-4188-9703-A84CD9706A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{826404E3-41EF-498A-A227-8439FB74490F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{826404E3-41EF-498A-A227-8439FB74490F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{826404E3-41EF-498A-A227-8439FB74490F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{826404E3-41EF-498A-A227-8439FB74490F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
