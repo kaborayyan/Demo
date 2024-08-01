@@ -315,7 +315,6 @@ namespace Collections
             bool Result03 = queue.TryDequeue(out int Element02);
             Console.WriteLine(Element02);
             #endregion
-
         }
     }
 }
