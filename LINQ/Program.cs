@@ -39,13 +39,15 @@
             {
                 Console.Write($"{item} ");
             }
-            
+            Console.WriteLine();
+
             // 1.2. LINQ Operator as Extension method through sequence "Recommended"
             var result = Numbers02.Where(N => N % 2 == 0);
             foreach (var item in result)
             {
                 Console.Write($"{item} ");
             }
+            Console.WriteLine();
 
             // 2. Query Syntax "Like SQL Style"
             // start with from
@@ -59,6 +61,7 @@
             {
                 Console.Write($"{item} ");
             }
+            Console.WriteLine();
             // some will be easier using the Query Syntax
             // like join, group by, let, into
 
@@ -73,6 +76,7 @@
             {
                 Console.Write($"{item} "); // the result will include 10 and 12
             }
+            Console.WriteLine();            
 
             // Load the data for the work
         }
