@@ -88,7 +88,7 @@ namespace EFCore
             modelBuilder.Entity<StudentCourse>()
                         .HasKey(SC => new { SC.StudentID, SC.CourseID });
 
-            // For many to many with a third table
+            // For Many to Many with a third table
             modelBuilder.Entity<Student>()
                         .HasMany(S => S.StudentCourses)
                         .WithOne(SC => SC.Student)
