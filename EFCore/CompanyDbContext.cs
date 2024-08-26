@@ -11,7 +11,7 @@ namespace EFCore
     // Each database needs its own DbContext
     // Create a Class with the name of the database
     #endregion
-    internal class CompanyDbContext: DbContext
+    internal class CompanyDbContext : DbContext
     {
         // To be able to use Fluent API
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -57,12 +57,55 @@ namespace EFCore
             });
             #endregion
             modelBuilder.ApplyConfiguration<Student>(new StudentConfigurations());
+            modelBuilder.ApplyConfiguration<Department>(new DepartmentConfiguration());
             // To activate Class StudentConfigurations
             // If you have many use
             // modelBuilder.ApplyConfigurationsFromAssembly
 
+            #region Relations in Fluent API
+            // Relationship in Fluent API
+            // One to many Relation
+            modelBuilder.Entity<Department>()
+                        .HasMany(D => D.Employees)
+                        .WithOne(E => E.Department)
+                        .HasForeignKey(E => E.DepartmentID)
+                        .OnDelete(DeleteBehavior.Cascade);
+            // Fluent API can be used to apply more customizations
+            // You can write the next code also
+            // But the code is usually written from a one side only 
+
+            //modelBuilder.Entity<Employee>()
+            //            .HasOne(E => E.Department)
+            //            .WithMany(D => D.Employees);
+
+            // Many to many
+            // if there are no fields on the relationship
+            //modelBuilder.Entity<Student>()
+            //            .HasMany(S => S.Courses)
+            //            .WithMany(C => C.Students);
+
+            // To Add a Composite Key
+            modelBuilder.Entity<StudentCourse>()
+                        .HasKey(SC => new { SC.StudentID, SC.CourseID });
+
+            // For many to many with a third table
+            modelBuilder.Entity<Student>()
+                        .HasMany(S => S.StudentCourses)
+                        .WithOne(SC => SC.Student)
+                        .IsRequired(true)
+                        .HasForeignKey(SC => SC.StudentID);
+
+            modelBuilder.Entity<Course>()
+                        .HasMany(C => C.CourseStudents)
+                        .WithOne(SC => SC.Course)
+                        .IsRequired(true)
+                        .HasForeignKey(SC => SC.CourseID);
+            #endregion
+
+            // REMEMBER Always use Has then With
             base.OnModelCreating(modelBuilder);
         }
+
         // We need to override OnConfiguring
         // Which is responsible for connecting to the server
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -74,8 +117,12 @@ namespace EFCore
         // We need to tell the machine to create the table
         // For that we need to create a property of type DbSet
         // Which will create a query to create the table
-        // For each Class you need to create a table, you need to add a DbSet property
+        // For each Class that will transformed into a table, you need to add a DbSet property
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
         public DbSet<Trainee> Trainees { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
     }
 }

@@ -62,7 +62,7 @@ namespace EFCore
         [Range(20, 60)] // data validation nothing equal in database
         public int? Age { get; set; }
 
-        [StringLength(50, MinimumLength = 10, ErrorMessage = "Please enter full name.")]
+        [StringLength(50, MinimumLength = 10, ErrorMessage = "Please enter full Address.")]
         public string Address { get; set; }
 
         [Phone]
@@ -73,6 +73,12 @@ namespace EFCore
 
         [NotMapped] // Derived attribute
         public int TotalSalary { get; set; }
+
+        [ForeignKey("Department")]
+        public int? DepartmentID { get; set; }
+
+        // Navigational Property => One
+        public Department Department { get; set; }
     }
     #endregion
     

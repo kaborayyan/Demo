@@ -12,8 +12,8 @@ namespace EFCore
     {
         public void Configure(EntityTypeBuilder<Student> student)
         {
-            student.HasKey(S => S.TraineeId);
-            student.Property(S => S.TraineeId).UseIdentityColumn(1, 1);
+            student.HasKey(S => S.StudentID);
+            student.Property(S => S.StudentID).UseIdentityColumn(1, 1);
             student.Property(S => S.Name).HasColumnType("varchar").HasMaxLength(50);
             student.Property(S => S.Salary).HasColumnType("money");
             student.Property(S => S.Address).HasMaxLength(50).HasDefaultValue("Cairo");
