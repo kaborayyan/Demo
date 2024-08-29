@@ -206,8 +206,8 @@ namespace EFCore
 
             #region CRUD Operations Update
             var employee = (from E in dbContext.Employees
-                       where E.Id == 1
-                       select E).FirstOrDefault();
+                            where E.Id == 1
+                            select E).FirstOrDefault();
             Console.WriteLine(dbContext.Entry(employee).State); // Unchanged
             employee.Name = "Hamada";
             Console.WriteLine(dbContext.Entry(employee).State); // Modified
@@ -217,8 +217,8 @@ namespace EFCore
 
             #region CRUD Operations Remove = Delete
             var employee01 = (from E in dbContext.Employees
-                            where E.Id == 1
-                            select E).FirstOrDefault();
+                              where E.Id == 1
+                              select E).FirstOrDefault();
             dbContext.Employees.Remove(employee01); // Removed locally
             Console.WriteLine(dbContext.Entry(employee01).State); // Deleted
             dbContext.SaveChanges(); // changes applied to database
@@ -233,6 +233,91 @@ namespace EFCore
             // For simple many to many with no fields on the relation, you will do it directly and EF will create the third table
             // In many to many relation with fields on the relation, you will have to create a third Class = table
             #endregion
+
+            #region Navigational Property
+            // By default EF core won't load the navigational property data
+            var Result01 = dbContext.Employees.FirstOrDefault(E => E.Id == 1);
+            Console.WriteLine(Result01.Department?.DepartmentName ?? "N/A"); // null
+
+            // To load the Navigational Property, you have three ways
+            // 1. Explicit Loading
+            // 2. Eager Loading
+            // 3. Lazy Loading "Implicit"
+            #endregion
+
+            #region Explicit Loading
+            // 1. Explicit Loading
+            var Result02 = dbContext.Employees.FirstOrDefault(E => E.Id == 1);
+            dbContext.Entry(Result02).Reference("Department").Load();
+            // dbContext.Entry(Result02).Reference(E => E.Department).Load(); // better way
+
+            Console.WriteLine(Result02.Department?.DepartmentName ?? "N/A"); // null
+
+            // For a collection .. List
+            var Result03 = dbContext.Departments.FirstOrDefault(D => D.DepartmentID == 10);
+            dbContext.Entry(Result03).Collection("Employees").Load();
+            // dbContext.Entry(Result03).Collection(D => D.Employees).Load(); // Better way
+            #endregion
+
+            #region Eager Loading
+            var Result04 = dbContext.Employees.Include("Department").FirstOrDefault(E => E.Id == 1);
+            var Result05 = dbContext.Employees.Include(E => E.Department).FirstOrDefault(E => E.Id == 1); // Better way
+                                                                                                          // if you have many properties Include().Include().Include().FirstOrDefault()
+
+            #endregion
+
+            #region Lazy Loading Implicit
+            // Two Lines also
+            // 1. Install Package Proxies
+            // 2. Edit OnConfiguring
+            // 3. Make all the entities public
+            // 4. Make all the navigational properties virtual
+            #endregion
+
+            #region Join Operators
+            // Fluent Syntax
+            // First table join 2nd table - FK - PK - requested fields as new{}
+            var Result06 = dbContext.Employees.Join(dbContext.Departments,
+                E => E.DepartmentID,
+                D => D.DepartmentID,
+                (E, D) => new
+                {
+                    EmployeeID = E.Id,
+                    EmployeeName = E.Name,
+                    DepartmentID = D.DepartmentID,
+                    DepartmentName = D.DepartmentName,
+                });
+
+            // Query Syntax
+            var Result07 = from E in dbContext.Employees
+                           join D in dbContext.Departments
+                           on E.DepartmentID equals D.DepartmentID
+                           select new
+                           {
+                               EmployeeID = E.Id,
+                               EmployeeName = E.Name,
+                               DepartmentID = D.DepartmentID,
+                               DepartmentName = D.DepartmentName,
+                           };
+            #endregion
+
+            #region Tracking vs No Tracking
+            // The default is tracking
+            // by using context.Entry(variable).state
+            // To disable it use AsNoTracking()
+            // useful for data testing
+            var Result08 = dbContext.Employees.AsNoTracking().FirstOrDefault(E => E.Id == 1);
+            #endregion
+
+            #region Remote vs Local
+            // To avoid extra traffic to the server
+            // The data will be loaded once only
+            dbContext.Employees.Load();
+            dbContext.Employees.Local.Any();
+
+            #endregion
+
+
 
 
 

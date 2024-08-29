@@ -65,7 +65,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymous", "Anonymous\Anon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "LINQ\LINQ.csproj", "{BD73D7AB-8075-4F09-B3F3-23955587D066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore", "EFCore\EFCore.csproj", "{B5DEDB0E-B645-4361-B15D-B51EE1D4A0AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore", "EFCore\EFCore.csproj", "{B5DEDB0E-B645-4361-B15D-B51EE1D4A0AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Inheritance", "EF_Inheritance\EF_Inheritance.csproj", "{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +203,10 @@ Global
 		{B5DEDB0E-B645-4361-B15D-B51EE1D4A0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5DEDB0E-B645-4361-B15D-B51EE1D4A0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5DEDB0E-B645-4361-B15D-B51EE1D4A0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

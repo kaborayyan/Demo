@@ -110,7 +110,8 @@ namespace EFCore
         // Which is responsible for connecting to the server
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = .; Database = CompanyDB; Trusted_Connection = True; TrustServerCertificate = True");
+            // optionsBuilder.UseLazyLoadingProxies(); // or the next
+            optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server = .; Database = CompanyDB; Trusted_Connection = True; TrustServerCertificate = True");
         }
 
         // Now we are connected to the server and entered the database
