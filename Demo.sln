@@ -74,6 +74,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{AEE2D635
 		ASP.NETCore.md = ASP.NETCore.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_NET_5", "MVC_NET_5\MVC_NET_5.csproj", "{1A4E9551-9004-4FEB-8665-7EBB9A602FF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -212,6 +214,10 @@ Global
 		{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3512CD46-BD3D-4BDA-B54F-32CBADDC4240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4E9551-9004-4FEB-8665-7EBB9A602FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4E9551-9004-4FEB-8665-7EBB9A602FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4E9551-9004-4FEB-8665-7EBB9A602FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4E9551-9004-4FEB-8665-7EBB9A602FF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

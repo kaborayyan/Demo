@@ -35,9 +35,9 @@ You can build different applications
 MVC is short for Mode-View-Controller.  
 Sepration of Concerns.  
 
-1. Model: Classes that represent the tables inside the database.
+1. Model: Classes that represent the tables inside the database. It represents the data.
 
-2. Controller: A Class. Its name must end with controller and inherit Class Controller. Inside it 5 methods = 5 actions. Inside each method is a LINQ expression. It connects to both Models and Views. Deals with http requests.
+2. Controller: A Class responsible for processing. Its name must end with controller and inherit Class Controller. Inside it 5 methods = 5 actions. Inside each method is a LINQ expression. It connects to both Models and Views. Deals with http requests.
     1. Get
     2. Get by Id
     3. Create
@@ -160,4 +160,31 @@ It had three products
 ### Web Services
 Web API "Model + Controller Only" through ASP.NET + SignalR  
 SignalR is a tool that provides real time functionality  
-You create an end point that provides raw data without a view  
+You create an end point that provides raw data without a view
+
+### Different Templtes
+1. Razor Pages has two folders: Models and Views
+2. Models acts as both Models and Controllers
+
+### Server: .NET vs .NET Core
+* For ASP.NET only a Windows Server IIS. The IIS had a namespace called System.Web which had the base Class Library of .NET. The IIS was reponsible for handling the requests
+* For ASP.NET Core. The server may have different type of operating systems and servers {Nginx or Apache for Linus or Mac - IIS for Windows}. they're called Reverse Proxy Server = External Web Server. Those received the requests only. Any Application in ASP.NET Core "MVC, Razor or API" is actually made of two parts: the application that you made and a Console Application which is called Kestrel = internal web server. The Kestrel communicates with the Reverse Proxy Server. the Kestrel is made of 8 pipelines or 8 middleware. If any failed, the whole process failed.
+* Another variant of deployment, the client side will communicate directly with the Kestrel. However, Microsoft recommends the first approach.
+
+### MVC Life Cycle
+1. The Client side will send HTTP request to the Controller
+2. The Controller: will receive, interpret and validate input. Create and update views. Query & modify models.
+3. The Controller will demand data from the Model
+4. The Model: data storage, integrity, consistency, queries & mutations
+5. The Model will send the data to the controller.
+6. The Controller will send the data to the Views
+7. The View: presentation assets
+
+### Empty MVC Core Template
+* Connected Services: for any external service or API that will be used in your project
+* Dependencies - Analyzers: dependencies needed for the compiler
+* Dependencies - Frameworks
+* Also any packages or references from other projects will be included here
+* File launchSettings.json won't be uploaded during deployment, it only acts locally
+* If you run the IIS, you'll open the web page only. If you run the project "Kestrel", you'll have a web page and a console app
+* File appsettimgs.json responsible for configurations like Connection String for example. We should have 4 versions of it. Development, Testing, Staging and Production.

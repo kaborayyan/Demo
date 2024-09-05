@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<!--
+    The _Layout shared view is an html file that contains all the shared code between all views of the same controller or even different controller. The different code will appear due to the RenderBody() function in the middle of the code
+-->
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @*Start Header*@
+    <nav class="mt-5">
+        <center>
+            <a class="btn btn-primary" href="/Home/Index">Home</a>
+            <a class="btn btn-secondary" href="/Home/AboutUs">About Us</a>
+            <a class="btn btn-success" href="/Home/Privacy">Privacy</a>
+            <a class="btn btn-warning" href="/Home/ContactUs">Contact Us</a>
+            <a class="btn btn-danger" href="/Account/Login">Login</a>
+            <a class="btn btn-info" href="/Account/Register">Register</a>
+        </center>
+    </nav>
+    @*End Header*@
+
+    <div>
+        @* This function will render the extra different codes between the pages*@
+        @RenderBody()
+    </div>
+
+    @*Start Footer*@
+    <footer class="mt-5">
+        <center>
+            <div>
+                <p>CopyRights &copy; Route @DateTime.Now.Year</p>
+            </div>
+        </center>
+    </footer>
+    @*End Footer*@
+</body>
+</html>
