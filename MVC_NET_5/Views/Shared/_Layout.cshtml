@@ -13,7 +13,22 @@
     @*Start Header*@
     <nav class="mt-5">
         <center>
+            @* HTML Tags*@
             <a class="btn btn-primary" href="/Home/Index">Home</a>
+
+            @*HTML Helpers*@
+            @*Feature from the old ASP.NET*@
+            @*C# Methods that will generate HTML Code*@
+            @*Link name - Action - Controller - Route values "if needed"*@
+            @*@ before class because class has meaning in C#*@
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-primary" })
+
+            @*Tag Helpers*@
+            @*A Feature from ASP.NET Core*@
+            @*To use them you have to add them to the top of page*@
+            @*The easiest and the best*@
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a>
+
             <a class="btn btn-secondary" href="/Home/AboutUs">About Us</a>
             <a class="btn btn-success" href="/Home/Privacy">Privacy</a>
             <a class="btn btn-warning" href="/Home/ContactUs">Contact Us</a>

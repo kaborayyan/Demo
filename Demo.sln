@@ -74,7 +74,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{AEE2D635
 		ASP.NETCore.md = ASP.NETCore.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_NET_5", "MVC_NET_5\MVC_NET_5.csproj", "{1A4E9551-9004-4FEB-8665-7EBB9A602FF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_NET_5", "MVC_NET_5\MVC_NET_5.csproj", "{1A4E9551-9004-4FEB-8665-7EBB9A602FF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
