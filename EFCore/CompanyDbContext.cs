@@ -100,9 +100,9 @@ namespace EFCore
                         .WithOne(SC => SC.Course)
                         .IsRequired(true)
                         .HasForeignKey(SC => SC.CourseID);
+            // REMEMBER Always use Has then With
             #endregion
 
-            // REMEMBER Always use Has then With
             base.OnModelCreating(modelBuilder);
         }
 

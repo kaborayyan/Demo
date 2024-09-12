@@ -12,7 +12,7 @@ You can build different applications
 ### SDK
 
 1. Common Base Libraries "Base Classes"
-2. Infrasturcuture
+2. Infrastructure
     1. JIT Compilers
     2. Garbage Collector
     3. Roslyn Compiler
@@ -22,7 +22,7 @@ You can build different applications
 
 1. Server Side Applications
     1. MVC
-    2. Razor Pages "MVVM Different Architecure Pattern"
+    2. Razor Pages "MVVM Different Architecture Pattern"
 2. Web API for mobile and front-end apps. We will use RESTful API
 
 ### .NET Blazor
@@ -33,7 +33,7 @@ You can build different applications
 ### ASP.NET Core MVC
 
 MVC is short for Mode-View-Controller.  
-Sepration of Concerns.  
+Separation of Concerns.  
 
 1. Model: Classes that represent the tables inside the database. It represents the data.
 
@@ -145,7 +145,7 @@ Server side understands different languages and technologies
 1. Client sends HTTP Request to the server
 2. The server will communicate with the database through the backend app and generate the required data
 3. the server will generate new HTML, CSS and JS code and
-4. Send them as HTTP reponse to the client side
+4. Send them as HTTP response to the client side
 
 ### The Old ASP.NET
 It had three products  
@@ -162,7 +162,7 @@ Web API "Model + Controller Only" through ASP.NET + SignalR
 SignalR is a tool that provides real time functionality  
 You create an end point that provides raw data without a view
 
-### Different Templtes
+### Different Templates
 1. Razor Pages has two folders: Models and Views
 2. Models acts as both Models and Controllers
 
